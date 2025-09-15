@@ -61,7 +61,7 @@ header a:hover {
 
 .productos figure:hover {
     transform: scale(1.05);
-    border-color: #FFD700;
+    border-color: #6178d2;
 }
 
 .productos img {
@@ -83,7 +83,7 @@ header a:hover {
     background: #f0f0f0;
 }
 
-.gif gif {
+.gif img {
     width: 400px;
     border: 3px solid #FFD700;
     border-radius: 10px;
