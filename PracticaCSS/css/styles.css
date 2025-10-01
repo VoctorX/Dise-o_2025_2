@@ -1,0 +1,79 @@
+.barranav{
+    background-color: rgba(90, 180, 180, 0.866);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 8px;
+}
+.barranav a{
+    background: white;
+    color: #000000;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.busqueda{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.busqueda input{
+    padding: 4px 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: 17px;
+}
+.busqueda button{
+    cursor: pointer;
+    background: white;
+    border: none;
+    border-radius: 100%;
+    padding: 6px 10px;
+}
+.carrusel{
+    position: relative;
+    max-width: 600px;
+    margin: 42px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.carrusel-img{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carrusel-img img{
+    flex: 0 0 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+.carrusel button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+.carrusel button:hover{
+    background: rgba(90, 180, 180, 0.866);
+}
+.prev {
+    left: 10px;
+}
+.next{
+    right: 10px;
+}

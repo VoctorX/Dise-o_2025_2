@@ -5,3 +5,11 @@ h1{
 footer{
     color: aqua;
 }
+.lo h1{
+    padding: 11px;
+}
+.lo{
+    font-size:xx-small;
+    background-color: black;
+}
+
