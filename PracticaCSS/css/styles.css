@@ -77,3 +77,8 @@
 .next{
     right: 10px;
 }
+.info-salud p {
+    color: #333;                /* texto oscuro */
+    margin-bottom: 12px;
+    font-size: 17px;
+}
