@@ -12,4 +12,9 @@ footer{
     font-size:xx-small;
     background-color: black;
 }
-
+.box{
+    gap: 20px;  /* espacio entre div */
+    display: flex; /* Misma linea el div */
+    justify-content: center; /* Centrar todos los textos */
+    flex-direction: row-reverse; /* Todo en reversa */
+}
