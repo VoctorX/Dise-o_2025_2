@@ -4,3 +4,6 @@
 [submodule "PracticaCSS"]
 	path = PracticaCSS
 	url = https://github.com/TU-USUARIO/PracticaCSS.git
+[submodule "PracticaHTML"]
+	path = PracticaHTML
+	url = https://github.com/VoctorX/PracticaHTML.git
