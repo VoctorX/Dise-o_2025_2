@@ -3,7 +3,7 @@
 	url = https://github.com/VoctorX/PracticaFlex.git
 [submodule "PracticaCSS"]
 	path = PracticaCSS
-	url = https://github.com/TU-USUARIO/PracticaCSS.git
+	url = https://github.com/VoctorX/PracticaCSS.git
 [submodule "PracticaHTML"]
 	path = PracticaHTML
 	url = https://github.com/VoctorX/PracticaHTML.git
