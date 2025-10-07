@@ -1,3 +1,6 @@
 [submodule "PracticaFlex"]
 	path = PracticaFlex
 	url = https://github.com/VoctorX/PracticaFlex.git
+[submodule "PracticaCSS"]
+	path = PracticaCSS
+	url = https://github.com/TU-USUARIO/PracticaCSS.git
