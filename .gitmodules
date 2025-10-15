@@ -8,6 +8,6 @@
 	path = PracticaHTML
 	url = https://github.com/VoctorX/PracticaHTML.git
 [submodule "PracticaGrid"]
-path = PracticaHTML
-url = https://github.com/VoctorX/PracticaGrid.git
+	path = PracticaGrid
+	url = https://github.com/VoctorX/PracticaGrid.git
 
