@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="Calculadora">
+    <link rel="stylesheet" href="views/css/output.css">
+    <script src="views/js/script.js" defer></script>
+    <title>Calculadora</title>
+</head>
+<body class="bg-gradient-to-br from-gray-800 to-gray-900 min-h-screen flex items-center justify-center p-4">
+    
+    <!-- Contenedor de la calculadora -->
+    <div class="bg-gray-900 rounded-3xl shadow-2xl p-6 w-full max-w-sm">
+        
+        <!-- Pantalla -->
+        <div class="bg-gray-800 rounded-2xl p-6 mb-6 text-right">
+            <div id="previousOperand" class="text-gray-500 text-sm h-6 mb-1"></div>
+            <div id="currentOperand" class="text-white text-4xl font-bold break-all">0</div>
+        </div>
+        
+        <!-- Botones -->
+        <div class="grid grid-cols-4 gap-3">
+            
+            <!-- Fila 1: Funciones especiales -->
+            <button onclick="calculator.clear()" class="bg-gray-600 hover:bg-gray-500 text-white font-semibold py-6 rounded-xl transition transform hover:scale-105 active:scale-95">
+                AC
+            </button>
+            <button onclick="calculator.delete()" class="bg-gray-600 hover:bg-gray-500 text-white font-semibold py-6 rounded-xl transition transform hover:scale-105 active:scale-95">
+                DEL
+            </button>
+            <button onclick="calculator.chooseOperation('%')" class="bg-gray-600 hover:bg-gray-500 text-white font-semibold py-6 rounded-xl transition transform hover:scale-105 active:scale-95">
+                %
+            </button>
+            <button onclick="calculator.chooseOperation('÷')" class="bg-orange-500 hover:bg-orange-400 text-white font-semibold py-6 rounded-xl transition transform hover:scale-105 active:scale-95 text-2xl">
+                ÷
+            </button>
+            
+            <!-- Fila 2: 7, 8, 9, × -->
+            <button onclick="calculator.appendNumber('7')" class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-6 rounded-xl transition transform hover:scale-105 active:scale-95 text-xl">
+                7
+            </button>
+            <button onclick="calculator.appendNumber('8')" class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-6 rounded-xl transition transform hover:scale-105 active:scale-95 text-xl">
+                8
+            </button>
+            <button onclick="calculator.appendNumber('9')" class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-6 rounded-xl transition transform hover:scale-105 active:scale-95 text-xl">
+                9
+            </button>
+            <button onclick="calculator.chooseOperation('×')" class="bg-orange-500 hover:bg-orange-400 text-white font-semibold py-6 rounded-xl transition transform hover:scale-105 active:scale-95 text-2xl">
+                ×
+            </button>
+            
+            <!-- Fila 3: 4, 5, 6, - -->
+            <button onclick="calculator.appendNumber('4')" class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-6 rounded-xl transition transform hover:scale-105 active:scale-95 text-xl">
+                4
+            </button>
+            <button onclick="calculator.appendNumber('5')" class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-6 rounded-xl transition transform hover:scale-105 active:scale-95 text-xl">
+                5
+            </button>
+            <button onclick="calculator.appendNumber('6')" class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-6 rounded-xl transition transform hover:scale-105 active:scale-95 text-xl">
+                6
+            </button>
+            <button onclick="calculator.chooseOperation('-')" class="bg-orange-500 hover:bg-orange-400 text-white font-semibold py-6 rounded-xl transition transform hover:scale-105 active:scale-95 text-2xl">
+                -
+            </button>
+            
+            <!-- Fila 4: 1, 2, 3, + -->
+            <button onclick="calculator.appendNumber('1')" class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-6 rounded-xl transition transform hover:scale-105 active:scale-95 text-xl">
+                1
+            </button>
+            <button onclick="calculator.appendNumber('2')" class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-6 rounded-xl transition transform hover:scale-105 active:scale-95 text-xl">
+                2
+            </button>
+            <button onclick="calculator.appendNumber('3')" class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-6 rounded-xl transition transform hover:scale-105 active:scale-95 text-xl">
+                3
+            </button>
+            <button onclick="calculator.chooseOperation('+')" class="bg-orange-500 hover:bg-orange-400 text-white font-semibold py-6 rounded-xl transition transform hover:scale-105 active:scale-95 text-2xl">
+                +
+            </button>
+            
+            <!-- Fila 5: 0, ., = -->
+            <button onclick="calculator.appendNumber('0')" class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-6 rounded-xl transition transform hover:scale-105 active:scale-95 text-xl col-span-2">
+                0
+            </button>
+            <button onclick="calculator.appendNumber('.')" class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-6 rounded-xl transition transform hover:scale-105 active:scale-95 text-2xl">
+                .
+            </button>
+            <button onclick="calculator.compute()" class="bg-orange-500 hover:bg-orange-400 text-white font-semibold py-6 rounded-xl transition transform hover:scale-105 active:scale-95 text-2xl">
+                =
+            </button>
+            
+        </div>
+        
+    </div>
+</body>
+</html>
