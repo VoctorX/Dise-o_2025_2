@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat - Asistente Virtual SAUL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" />
+
+    <style>
+      /* Animación de entrada para los mensajes */
+      .fade-in {
+        animation: fadeIn 0.4s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(5px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Efecto brillante para el título */
+      .glow {
+        text-shadow: 0 0 8px #facc15, 0 0 16px #facc15;
+      }
+
+      /* Fondo con gradiente */
+      body {
+        background: linear-gradient(135deg, #1e3a8a, #0f172a);
+      }
+    </style>
+  </head>
+
+  <body
+    class="text-gray-100 flex flex-col items-center min-h-screen font-sans relative overflow-hidden"
+  >
+    <!-- Imagen de fondo decorativa IA -->
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/4712/4712026.png"
+      alt="IA fondo"
+      class="absolute opacity-10 w-80 top-10 right-10 hidden md:block"
+    />
+
+    <!-- Encabezado -->
+    <header
+      class="w-full bg-blue-800/80 py-4 shadow-lg text-center backdrop-blur-md border-b border-yellow-400"
+    >
+      <h1 class="text-3xl font-bold tracking-wide text-yellow-400 glow">
+        Asistente Virtual SAUL
+      </h1>
+      <p class="text-gray-300 text-sm">
+        Sistema de Acompañamiento Lasallista — Siempre contigo 💛
+      </p>
+    </header>
+
+    <!-- Contenedor principal -->
+    <main
+      class="flex flex-col lg:flex-row justify-center items-center w-full max-w-5xl bg-blue-950/70 p-6 mt-10 rounded-2xl shadow-2xl border border-blue-800 backdrop-blur-md"
+    >
+      <!-- Nueva imagen lateral -->
+      <div class="hidden lg:flex flex-col items-center justify-center w-1/2">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/11688/11688045.png"
+          alt="Estudiante con IA"
+          class="rounded-2xl shadow-lg mb-4 w-96"
+        />
+        <p class="text-gray-300 text-center text-sm max-w-xs italic">
+          “Aprende, consulta y crece con el apoyo de SAUL,  
+          tu asistente virtual educativo. 📘🤖”
+        </p>
+      </div>
+
+      <!-- Sección de chat -->
+      <div
+        class="flex flex-col justify-between w-full lg:w-1/2 bg-blue-900/90 p-4 rounded-2xl shadow-xl h-[70vh]"
+      >
+        <!-- Ventana del chat -->
+        <div
+          id="chat-box"
+          class="flex flex-col space-y-3 overflow-y-auto h-full p-3"
+        >
+          <div
+            class="self-start bg-blue-700 text-gray-100 px-4 py-2 rounded-2xl max-w-xs fade-in shadow-md"
+          >
+            👋 ¡Hola! Soy <span class="text-yellow-400 font-semibold">SAUL</span>,  
+            tu asistente virtual universitario.  
+            ¿En qué puedo ayudarte hoy?
+          </div>
+        </div>
+
+        <!-- Área de entrada -->
+        <div class="flex mt-4">
+          <input
+            id="user-input"
+            type="text"
+            placeholder="Escribe tu mensaje..."
+            class="flex-1 rounded-l-xl px-4 py-2 text-gray-900 focus:outline-none"
+          />
+          <button
+            id="send-btn"
+            class="bg-yellow-400 text-blue-900 px-4 py-2 rounded-r-xl font-semibold hover:bg-yellow-300 transition-colors"
+          >
+            Enviar
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Pie -->
+    <footer class="mt-8 text-gray-400 text-xs text-center">
+      © 2025 Gabriel Gómez — Proyecto SAUL · Unilasallista 🦁
+    </footer>
+
+    <!-- Script funcional del chat -->
+    <script>
+      const chatBox = document.getElementById("chat-box");
+      const input = document.getElementById("user-input");
+      const sendBtn = document.getElementById("send-btn");
+
+      // Función para agregar mensajes al chat
+      function addMessage(text, sender) {
+        const msg = document.createElement("div");
+        msg.classList.add(
+          "px-4",
+          "py-2",
+          "rounded-2xl",
+          "max-w-xs",
+          "break-words",
+          "fade-in",
+          "shadow-md"
+        );
+
+        if (sender === "user") {
+          msg.classList.add("self-end", "bg-yellow-400", "text-blue-900");
+        } else {
+          msg.classList.add("self-start", "bg-blue-700", "text-gray-100");
+        }
+
+        msg.textContent = text;
+        chatBox.appendChild(msg);
+        chatBox.scrollTop = chatBox.scrollHeight;
+      }
+
+      // Evento de envío de mensaje
+      sendBtn.addEventListener("click", () => {
+        const text = input.value.trim();
+        if (text === "") return;
+
+        addMessage(text, "user");
+        input.value = "";
+
+        // Respuesta simulada del asistente SAUL
+        setTimeout(() => {
+          const responses = [
+            "Puedo ayudarte con estrategias de estudio 📚",
+            "¿Deseas conocer los horarios de tutorías disponibles?",
+            "Recuerda que siempre puedes solicitar acompañamiento psicológico 💬",
+            "Estoy aquí para orientarte. ¿Qué materia necesitas reforzar?",
+          ];
+          const randomResponse =
+            responses[Math.floor(Math.random() * responses.length)];
+          addMessage(randomResponse, "bot");
+        }, 700);
+      });
+
+      // Permitir enviar con Enter
+      input.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") sendBtn.click();
+      });
+    </script>
+  </body>
+</html>
+
+
