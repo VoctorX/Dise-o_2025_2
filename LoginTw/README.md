@@ -1,6 +1,6 @@
-# Calculadora con Tailwind CSS v4
+# Login / Sign up con Tailwind CSS v4
 
-Una calculadora simple y moderna desarrollada con HTML, JavaScript y Tailwind CSS v4.
+Un Login / Sign up solo visual desarrollada con HTML, JavaScript y Tailwind CSS v4.
 
 ## Requisitos Previos
 
@@ -14,7 +14,7 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
 ### 1. Navega a la carpeta del proyecto
 
 ```bash
-cd CalculadoraTailwind
+cd LoginTw
 ```
 
 ### 2. Inicializa npm
@@ -59,14 +59,14 @@ Abre el archivo `index.html` en tu navegador y ¡listo! La calculadora estará f
 Asi deberia quedar tu proyecto:
 
 ```
-proyecto/
+LoginTw/
 │
 ├── css/
 │   ├── styles.css      # Archivo fuente de Tailwind
 │   └── output.css      # Archivo compilado (generado automáticamente)
 │
 ├── js/
-│   └── script.js       # Lógica de la calculadora
+│   └── script.js      
 │
 ├── index.html          # Estructura HTML
 ├── package.json        # Dependencias del proyecto

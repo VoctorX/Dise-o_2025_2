@@ -10,4 +10,13 @@
 [submodule "PracticaGrid"]
 	path = PracticaGrid
 	url = https://github.com/VoctorX/PracticaGrid.git
+[submodule "CalculadoraTailwind"]
+	path = CalculadoraTailwind
+	url = https://github.com/VoctorX/CalculadoraTailwind.git
+[submodule "LoginTw"]
+	path = LoginTw
+	url = https://github.com/VoctorX/LoginTw.git
+[submodule "TailwindSAUL"]
+	path = TailwindSAUL
+	url = https://github.com/VoctorX/TailwindSAUL.git
 
