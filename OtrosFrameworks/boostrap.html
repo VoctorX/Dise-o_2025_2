@@ -41,7 +41,7 @@
 
     <main class="container my-4">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-12">
                 <h2 class="texto-num1 mb-4">Últimas Publicaciones</h2>
                 
                 <article class="caja-blanca mb-4">
@@ -87,7 +87,7 @@
                 </section>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-12 mt-4">
                 <div class="caja-blanca mb-4">
                     <h3 class="texto-num2">Acerca de Nosotros</h3>
                     <p class="texto-parrafo">ETS INFOPLUS es una comunidad de apoyo e información sobre enfermedades de transmisión sexual. Proporcionamos información precisa y reducimos el estigma.</p>
@@ -95,14 +95,98 @@
 
                 <div class="caja-blanca">
                     <h3 class="texto-num2">Recursos</h3>
+                    <!-- Inicio Aporte Creativo Victor -->
                     <ul class="lista-recursos">
-                        <li><a href="#">Centro de Ayuda</a></li>
-                        <li><a href="#">Pruebas ETS</a></li>
-                        <li><a href="#">Videos e Infografías</a></li>
+                        <li>
+                            <button type="button" class="btn btn-info text-start" data-bs-toggle="modal" data-bs-target="#contactoModal">
+                                <i class="bi bi-telephone-fill me-2"></i> Centro de Ayuda
+                            </button>
+                            <div class="modal fade" id="contactoModal" tabindex="-1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-info text-white">
+                                            <h5 class="modal-title">Centro de Ayuda</h5>
+                                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="text-center mb-3">
+                                                <i class="bi bi-headset fs-1 text-info"></i>
+                                            </div>
+                                            <p class="mb-1"><i class="bi bi-envelope me-2"></i> Email: info@etsinfoplus.com</p>
+                                            <p><i class="bi bi-telephone me-2"></i> Teléfono: 300-693-3211</p>
+                                            <div class="alert alert-info mt-3">
+                                                <i class="bi bi-info-circle me-2"></i> Horario de atención: Lunes a Viernes 8am-6pm
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <br>
+                        <li>
+                            <button type="button" class="btn btn-info text-start" data-bs-toggle="modal" data-bs-target="#videosModal">
+                                <i class="bi bi-play-circle me-2"></i> Videos Informativos
+                            </button>
+                            <div class="modal fade" id="videosModal" tabindex="-1">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-info text-white">
+                                            <h5 class="modal-title">Videos Informativos</h5>
+                                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="ratio ratio-16x9">
+                                                <iframe src="https://www.youtube.com/embed/Ko_Oz6spVgw?si=tU1qW1shW1NznXtP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <br>
+                        <li>
+                            <button type="button" class="btn btn-info text-start" data-bs-toggle="modal" data-bs-target="#mapaModal">
+                                <i class="bi bi-geo-alt-fill me-2"></i> Encuentra centros de pruebas
+                            </button>
+                            <div class="modal fade" id="mapaModal" tabindex="-1">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-info text-white">
+                                            <h5 class="modal-title">Centros de Pruebas Cercanos</h5>
+                                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="Ingresa tu ubicación o código postal">
+                                                    <button class="btn btn-info" type="button">
+                                                        <i class="bi bi-search"></i> Buscar
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="ratio ratio-16x9">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368459414!3d40.74844097932847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1639920788553!5m2!1sen!2sus! allowfullscreen="" loading="lazy"></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
+            <div class="container mt-3">
+                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                    <strong>¡Importante!</strong> La detección temprana salva vidas. Realízate pruebas de ETS regularmente.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            </div>
+            <!-- Fin Aporte Creativo Victor -->
         </div>
+        
     </main>
 
     <!-- Nuevo footer -->
@@ -124,6 +208,7 @@
                     <li><a href="#preguntas" class="text-white text-decoration-none">Preguntas Frecuentes</a></li>
                     <li><a href="#mitos" class="text-white text-decoration-none">Mitos y Realidades</a></li>
                     <li><a href="#" class="text-white text-decoration-none">Política de Privacidad</a></li>
+                    <li></li>
                 </ul>
             </div>
         </div>

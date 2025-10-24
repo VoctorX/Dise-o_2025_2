@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css">
+  <title>Mi Primer Estilo y un Nuevo</title>
+  <style>
+    /* Estilos  */
+    body {
+      background-color: lightblue;
+    }
+    h1 {
+      color: navy;
+      text-align: center;
+    }
+    p {
+      color: darkred;
+      font-size: 18px;
+    }
+
+    /* Estilos de la Tabla */
+    table {
+      width: 90%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: white;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #008CBA;
+      color: white;
+      font-weight: bold;
+    }
+    .nota {
+      font-weight: normal;
+      color: #008CBA;
+    }
+
+    /* --- primer --- */
+    .nuevo-primer-estilo {
+      border: 2px dashed orange;
+      background-color: #f7f7f7;
+      padding: 15px;
+      margin: 30px auto;
+      width: 60%;
+      text-align: center;
+      color: #333;
+      border-radius: 5px;
+    }
+    /* ------------------------------------------- */
+    /* --- Fin CSS Parte de Aporte creativo --- */
+    .component-builder {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .component-selector {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .component-btn {
+      padding: 5px 12px;
+      border: 1px solid #ddd;
+      background: white;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 12px;
+    }
+    
+    .component-btn:hover {
+      background: #f0f0f0;
+      transform: translateY(-2px);
+    }
+    
+    .component-viewport {
+      min-height: 80px;
+      padding: 15px;
+      background: white;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #eee;
+    }
+    
+    .component-item {
+      display: none;
+    }
+    
+    #btn-radio:checked ~ .component-viewport .btn-component,
+    #label-radio:checked ~ .component-viewport .label-component,
+    #alert-radio:checked ~ .component-viewport .alert-component,
+    #badge-radio:checked ~ .component-viewport .badge-component {
+      display: block;
+    }
+    
+    input[type="radio"] {
+      display: none;
+    }
+    
+    #btn-radio:checked ~ .component-selector .for-btn,
+    #label-radio:checked ~ .component-selector .for-label,
+    #alert-radio:checked ~ .component-selector .for-alert,
+    #badge-radio:checked ~ .component-selector .for-badge {
+      background: #008CBA;
+      color: white;
+      border-color: #008CBA;
+    }
+    /* Fin CSS Parte de Aporte creativo */
+    
+  </style>
+</head>
+<body>
+
+  <h1>Mi primer estilo CSS</h1>
+  <p>Este es un párrafo con mi primer diseño.</p>
+
+  <hr>
+  <h2>Análisis Estructurado del Código</h2>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Tipo</th>
+        <th>Elemento</th>
+        <th>Propiedad CSS</th>
+        <th>Valor CSS</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="Label Label--gray">HTML</span></td>
+        <td>`<html>`</td>
+        <td>N/A</td>
+        <td>N/A</td>
+        <td>Contenedor principal del documento.</td>
+      </tr>
+      <tr>
+        <td><span class="Label Label--blue">CSS</span></td>
+        <td>`body`</td>
+        <td>`background-color`</td>
+        <td>`lightblue`</td>
+        <td>Fondo de la página azul claro. <span class="nota"></span></td>
+      </tr>
+      <tr>
+        <td><span class="Label Label--gray">HTML</span></td>
+        <td>`<h1>`</td>
+        <td>N/A</td>
+        <td>N/A</td>
+        <td>Título principal. Contenido: "Mi primer estilo CSS"</td>
+      </tr>
+      <tr>
+        <td><span class="Label Label--blue">CSS</span></td>
+        <td>`h1`</td>
+        <td>`color`</td>
+        <td>`navy`</td>
+        <td>Color de texto azul marino.</td>
+      </tr>
+      <tr>
+        <td><span class="Label Label--blue">CSS</span></td>
+        <td>`h1`</td>
+        <td>`text-align`</td>
+        <td>`center`</td>
+        <td>Centrado horizontal.</td>
+      </tr>
+      <tr>
+        <td><span class="Label Label--gray">HTML</span></td>
+        <td>`<p>`</td>
+        <td>N/A</td>
+        <td>N/A</td>
+        <td>Párrafo de texto.</td>
+      </tr>
+      <tr>
+        <td><span class="Label Label--blue">CSS</span></td>
+        <td>`p`</td>
+        <td>`color`</td>
+        <td>`darkred`</td>
+        <td>Color de texto rojo oscuro.</td>
+      </tr>
+      <tr>
+        <td><span class="Label Label--blue">CSS</span></td>
+        <td>`p`</td>
+        <td>`font-size`</td>
+        <td>`18px`</td>
+        <td>Tamaño de fuente de 18 píxeles.</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- Inicio Aporte Creativo Victor -->
+  <div class="nuevo-primer-estilo component-builder">
+    <h3 class="mb-2">Primer CSS Component Builder</h3>
+    <p class="text-small mb-3">Haz clic en los botones para ver componentes</p>
+
+    <input type="radio" id="btn-radio" name="component" checked>
+    <input type="radio" id="label-radio" name="component">
+    <input type="radio" id="alert-radio" name="component">
+    <input type="radio" id="badge-radio" name="component">
+    
+    <div class="component-selector">
+      <label for="btn-radio" class="component-btn for-btn">Botón</label>
+      <label for="label-radio" class="component-btn for-label">Etiqueta</label>
+      <label for="alert-radio" class="component-btn for-alert">Alerta</label>
+      <label for="badge-radio" class="component-btn for-badge">Insignia</label>
+    </div>
+    
+    <div class="component-viewport">
+      <div class="component-item btn-component">
+        <button class="btn btn-primary">Botón Principal</button>
+      </div>
+      
+      <div class="component-item label-component">
+        <span class="Label Label--success">Etiqueta Success</span>
+      </div>
+      
+      <div class="component-item alert-component">
+        <div class="flash flash-warn">
+          <svg class="octicon octicon-alert mr-2" viewBox="0 0 16 16" width="16" height="16">
+            <path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5z"></path>
+          </svg>
+          Alerta de Advertencia
+        </div>
+      </div>
+      
+      <div class="component-item badge-component">
+        <span class="Counter Counter--primary">42</span>
+        <span class="ml-2">Notificaciones</span>
+      </div>
+    </div>
+  </div>
+  <!-- Fin Aporte Creativo Victor -->
+</body>
+</html>
