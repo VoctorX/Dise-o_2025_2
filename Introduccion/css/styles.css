@@ -1,0 +1,43 @@
+h1{
+    color: gray;
+    padding: 250px;  
+}
+footer{
+    color: aqua;
+}
+.lo h1{
+    padding: 11px;
+}
+.lo{
+    font-size:xx-small;
+    background-color: black;
+}
+.box{
+    gap: 20px;  /* espacio entre div */
+    display: flex; /* Misma linea el div */
+    justify-content: center; /* Centrar todos los textos */
+    flex-direction: row-reverse; /* Todo en reversa */
+}
+
+body{
+    background-color: #f4f4f4;
+}
+
+/* List component */
+.list{
+    list-style: none;
+}
+
+.list .list-item{
+    display: flex;
+}
+
+/*list item image wrapper*/
+.list .list-item__image{
+    flex-shrink: 1;
+}
+
+        /*list item content*/
+.list .list-item__content{
+    flex-grow: 0;
+}

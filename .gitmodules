@@ -1,0 +1,22 @@
+[submodule "PracticaFlex"]
+	path = PracticaFlex
+	url = https://github.com/VoctorX/PracticaFlex.git
+[submodule "PracticaCSS"]
+	path = PracticaCSS
+	url = https://github.com/VoctorX/PracticaCSS.git
+[submodule "PracticaHTML"]
+	path = PracticaHTML
+	url = https://github.com/VoctorX/PracticaHTML.git
+[submodule "PracticaGrid"]
+	path = PracticaGrid
+	url = https://github.com/VoctorX/PracticaGrid.git
+[submodule "CalculadoraTailwind"]
+	path = CalculadoraTailwind
+	url = https://github.com/VoctorX/CalculadoraTailwind.git
+[submodule "LoginTw"]
+	path = LoginTw
+	url = https://github.com/VoctorX/LoginTw.git
+[submodule "TailwindSAUL"]
+	path = TailwindSAUL
+	url = https://github.com/VoctorX/TailwindSAUL.git
+

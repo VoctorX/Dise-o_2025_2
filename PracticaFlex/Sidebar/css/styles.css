@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #555;
+  background: radial-gradient(circle at top left, #9a6fea, #6632ce);
+}
+
+
+.sidebar-wrapper{
+  width: 300px;
+  margin: 30px auto;
+}
+
+.sidebar {
+    background: linear-gradient(180deg, #ffffffcc, #f0f4ffcc);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+}
+
+.sidebar__logo h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #995BED;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.sidebar__nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    margin: 0;
+    background-color: #FFF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    gap: 5px;
+    width: 100%;
+    border-top: 2px solid #eee;
+}
+.sidebar__nav li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.sidebar__nav li i{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.sidebar__nav li:hover i {
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+}
+.sidebar__nav li.active, .sidebar__nav li:hover{
+    color: #995BED;
+}
+
+.sidebar__profile{
+    text-align: center;
+    margin-top: 5px; 
+}
+.sidebar__profile img {
+    border: 3px solid transparent;
+    background: linear-gradient(45deg,#e62d9c,#7c5dbb) border-box;
+    border-radius: 50%;
+    padding: 3px;
+}
+.sidebar__profile img:hover {
+  transform: rotate(2deg) scale(1.15);
+  transition: transform 0.4s ease;
+}
+.sidebar__profile h4{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #2a2a2a;
+    margin: 10px 0 0;
+}
+
+.sidebar__texto{
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #181717;
+    margin: 40px auto;
+    padding: 60px 12px;
+    max-width: 80%;
+    line-height: 1.4;
+}
+
+.sidebar__bio {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #555;
+    margin: 5px 0 0;
+    text-align: center;
+    padding: 0 10px;
+}

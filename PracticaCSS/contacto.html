@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="descripcion aqui">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="script.js" defer></script>
+    <title>Contacto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+        <nav class="barranav">
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+            </a>
+            <a href="productos.html">
+                <i class="fa-solid fa-pills"></i>
+            </a>
+            <form class="busqueda">
+                <input type="text" placeholder="Buscar producto...">
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>    
+        </nav>
+    </header>
+
+  <main>
+    <section class="contacto">
+      <h2>Contactanos</h2>
+      <p>Queremos saber de ti. Si tienes dudas, sugerencias o comentarios, escríbenos.</p>
+      <form class="form-contacto">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electronico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <div class="datos-contacto">
+        <p><i class="fa-solid fa-phone"></i> +57 350 603 7128</p>
+        <p><i class="fa-solid fa-envelope"></i> cordobavictorml@gmail.com</p>
+        <p><i class="fa-solid fa-location-dot"></i> Unilasallista</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Tu bienestar es nuestra prioridad</p>
+  </footer>
+</body>
+</html>

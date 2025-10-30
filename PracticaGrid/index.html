@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="SISV Mockup">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>SISV Mockup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="main-layout">
+        <aside class="sidebar">
+            <div class="perfil">
+                <div class="perfil-img"><i class="fa-solid fa-user"></i></div>
+                <div class="perfil-nom">Victor Cordoba</div>
+                <button class="btn-cambiar">Cambiar datos</button>
+            </div>
+
+            <nav class="nav-menu">
+                <div class="nav-item"><i class="fa-solid fa-home"></i> Pagina Principal</div>
+                <div class="nav-item"><i class="fa-solid fa-chart-line"></i> Reportes</div>
+                <div class="nav-item"><i class="fa-solid fa-xmark"></i> Cerrar Sesion</div>
+            </nav>
+        </aside>
+
+        <header class="encabezado">
+            <h1 class="bienvenida">Bienvenido, Victor</h1>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar accidente por ID">
+            </div>
+        </header>
+        
+        <main>
+            <div class="grid">
+                <div class="grafico-funcion">
+                    <div class="grafico-linea">
+                        <svg viewBox="0 0 300 80" preserveAspectRatio="none">
+                            <polyline points="0,60 50,40 100,50 150,30 200,45 250,35 300,25"
+                                fill="none"
+                                stroke="rgba(255,255,255,0.6)"
+                                stroke-width="3"/>
+                        </svg>
+                    </div>
+                    <div class="grafico-label">Accidentes en Caldas (24h)</div>
+                </div>
+
+                <div class="accidentes1">
+                    <div class="cuadro-numero">43</div>
+                    <div>Accidentes en Caldas ultimo mes</div>
+                </div>
+
+                <div class="accidentes2">
+                    <div class="cuadro-numero">85</div>
+                    <div>Accidentes en Caldas ultimo año</div>
+                </div>
+
+                <div class="historial">
+                    <div class="historial-linea">
+                        <div class="historial-icono">⚠️</div>
+                        <div>
+                            <div class="historial-titulo">Volcamiento</div>
+                            <div class="historial-fecha">24/08/2025</div>
+                        </div>
+                    </div>
+                    <div class="historial-linea">
+                        <div class="historial-icono">⚠️</div>
+                        <div>
+                            <div class="historial-titulo">Incendio estructural</div>
+                            <div class="historial-fecha">23/08/2025</div>
+                        </div>
+                    </div>
+                    <div class="historial-linea">
+                        <div class="historial-icono">⚠️</div>
+                        <div>
+                            <div class="historial-titulo">Corte de Arbol</div>
+                            <div class="historial-fecha">23/08/2025</div>
+                        </div>
+                    </div>
+                    <div class="historial-linea">
+                        <div class="historial-icono">⚠️</div>
+                        <div>
+                            <div class="historial-titulo">Incendio forestal</div>
+                            <div class="historial-fecha">21/08/2025</div>
+                        </div>
+                    </div>
+                    <div class="historial-linea">
+                        <div class="historial-icono">⚠️</div>
+                        <div>
+                            <div class="historial-titulo">Matpel estructural</div>
+                            <div class="historial-fecha">19/08/2025</div>
+                        </div>
+                    </div>
+                    <div class="ver-todos">Ver todos los accidentes...</div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

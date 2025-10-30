@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo básico con Bulma</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Hola, Mundo</h1>
+      <p class="subtitle">Mi primer sitio con <strong>Bulma</strong></p>
+      <button class="button is-link is-large">Botón para que berthel me ponga 5.0</button>
+    </div>
+  </section>
+  <!--- Inicio Aporte Creativo Victor --->
+  <section class="section has-background-light">
+    <div class="container">
+      <h2 class="title has-text-centered">Componentes de Bulma</h2>
+      
+      <div class="tabs is-boxed is-centered" id="componentTabs">
+        <ul>
+          <li class="is-active" data-tab="buttons">
+            <a>
+              <i class="fas fa-hand-pointer mr-1"></i>Botones
+            </a>
+          </li>
+          <li data-tab="cards">
+            <a>
+              <i class="fas fa-id-card mr-1"></i>Botones
+            </a>
+          </li>
+
+        </ul>
+      </div>
+      
+      <div id="tabContent">
+        <div id="buttons" class="tab-pane">
+          <div class="field is-grouped is-grouped-multiline">
+            <p class="control">
+              <button class="button is-primary">Primary</button>
+            </p>
+            <p class="control">
+              <button class="button is-link">Link</button>
+            </p>
+            <p class="control">
+              <button class="button is-info">Info</button>
+            </p>
+            <p class="control">
+              <button class="button is-success">Succes</button>
+            </p>
+            <p class="control">
+              <button class="button is-warning">Warning</button>
+            </p>
+            <p class="control">
+              <button class="button is-danger">Danger</button>
+            </p>
+          </div>
+          
+          <div class="field is-grouped is-grouped-multiline mt-3">
+            <p class="control">
+              <button class="button is-small">Pequeño</button>
+            </p>
+            <p class="control">
+              <button class="button">Normal</button>
+            </p>
+            <p class="control">
+              <button class="button is-medium">Mediano</button>
+            </p>
+            <p class="control">
+              <button class="button is-large">Grande</button>
+            </p>
+          </div>
+          
+          <div class="notification is-info mt-4">
+            <p>Bulma ofrece diferentes colores y tamaños para botones.</p>
+          </div>
+        </div>
+        
+        <div id="cards" class="tab-pane is-hidden">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Componente Card
+              </p>
+              <button class="card-header-icon" aria-label="more options">
+                <span class="icon">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Las tarjetas en Bulma son componentes versátiles para presentar información de manera organizada.
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a href="#" class="card-footer-item">Guardar</a>
+              <a href="#" class="card-footer-item">Editar</a>
+              <a href="#" class="card-footer-item">Eliminar</a>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('#componentTabs li');
+      
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('is-active'));
+          tab.classList.add('is-active');
+          
+          document.querySelectorAll('.tab-pane').forEach(pane => {
+            pane.classList.add('is-hidden');
+          });
+          
+          const tabId = tab.getAttribute('data-tab');
+          document.getElementById(tabId).classList.remove('is-hidden');
+        });
+      });
+    });
+  </script>
+  <!--- Fin Aporte Creativo Victor --->
+</body>
+</html>

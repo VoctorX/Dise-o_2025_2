@@ -1,0 +1,3 @@
+#map { height: calc(100vh - 4rem); width: 100%; }
+.sidebar { transition: transform 0.3s ease-in-out; }
+.sidebar-hidden { transform: translateX(-100%); }
