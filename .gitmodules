@@ -20,3 +20,6 @@
 	path = TailwindSAUL
 	url = https://github.com/VoctorX/TailwindSAUL.git
 
+[submodule "LoginTareaJS"]
+	path = LoginTareaJS
+	url = https://github.com/VoctorX/LoginTareaJS.git
